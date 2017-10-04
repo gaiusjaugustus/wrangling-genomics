@@ -41,6 +41,7 @@ or
 #### Source code installation
 
 This is helpful when one wants to understand what type of files come with fastqc
+
 ````
 cd ~/src
 curl -O http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.5.zip
@@ -55,6 +56,7 @@ ln -sf ~/src/FastQC/fastqc ~/bin/fastqc
 # We need to set it ourselves.
 chmod +x ~/bin/fastqc
 ```
+
 Test installation by running:
 
 ```fastqc -h```
@@ -69,9 +71,13 @@ Trimmomatic is available for Linux, MacOS and Windows.
 Reference: The Biostars Handbook
 
 ```brew install trimmomatic```
+
 or
+
 ```conda install -y trimmomatic```
+
 #### Source Code Installation
+
 ```
 cd ~/src
 curl -O http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-0.36.zip
@@ -89,6 +95,7 @@ ls ~/src/Trimmomatic-0.36/adapters/
 Unfortunately running trimmomatic is as user unfriendly as it gets. To run it we "simply" type:
 
 ```java -jar ~/src/Trimmomatic-0.36/trimmomatic-0.36.jar```
+
 That gets old very quickly. To simplify the invocation create a script in the ~/bin folder:
 
 ```
@@ -96,6 +103,7 @@ echo '#!/bin/bash' > ~/bin/trimmomatic
 echo 'java -jar ~/src/Trimmomatic-0.36/trimmomatic-0.36.jar $@' >> ~/bin/trimmomatic
 chmod +x ~/bin/trimmomatic
 ```
+
 #### Test installation by running:
 
 ```
@@ -112,11 +120,13 @@ Bwa is available for Linux and MacOS.
 Reference: The Biostars Handbook
 
 ```brew install bwa```
+
 or
 
 ```conda install -y bwa```
 
 ##### Installation from source:
+
 ```
 cd ~/src
 curl -OL http://sourceforge.net/projects/bio-bwa/files/bwa-0.7.15.tar.bz2
@@ -129,9 +139,11 @@ export PATH=~/src/bwa-0.7.15:$PATH
 #### Test installation:
 
 Run:
+
 ```
 bwa
 ```
+
 BWA has a nicely formatted manual:
 
 ```man ~/src/bwa-0.7.12/bwa.1 ```
@@ -146,14 +158,18 @@ SAMtools is available for Linux and MacOS.
 Reference: The Biostars Handbook
 
 ```brew install samtools```
+
 or
+
 ```conda install -y samtools```
-Note:
+
+Note:    
 SAMtools has changed the command line invocation (for the better). But this means that most of the tutorials on the web indicate an older and obsolete usage.
 
 Use only SAMtools 1.3 or later.
 
 #### Source code installation
+
 ```
 cd ~/src
 curl -OkL https://github.com/samtools/samtools/releases/download/1.3/samtools-1.3.tar.bz2
@@ -165,10 +181,13 @@ make
 echo export `PATH=~/src/samtools-1.3:$PATH` >> ~/.bashrc
 source ~/.bashrc
 ```
+
 #### Test that the installation succeeded:
 
 ```samtools```
+
 SAMtools has a nicely formatted manual:
+
 ```
 man ~/src/samtools-1.3/samtools.1 
 ```
@@ -182,9 +201,10 @@ BCFtools is available for Linux and MacOS
 #### Installation Instructions
 
 ```brew install bcftools```
+
 or
-```
-conda install bcftools```
+
+```conda install bcftools```
 
 #### Install from source
 
