@@ -98,7 +98,9 @@ chmod +x ~/bin/trimmomatic
 ```
 #### Test installation by running:
 
-```trimmomatic```
+```
+trimmomatic
+```
 
 ### BWA
 
